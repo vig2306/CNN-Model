@@ -7,7 +7,11 @@
 		rel="stylesheet" type="text/css" /> 
 	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
 	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script> 
-	<meta charset=utf-8 /> 
+	<meta charset=utf-8 />
+	<link rel="stylesheet" href="style.css"> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 	<script src="{{ url_for('static', filename='upload.js') }}"></script> 
 
@@ -27,14 +31,26 @@
 </head> 
 
 <body> 
-	<form action="/uploader" method="POST" enctype="multipart/form-data"> 
-		<input type='file' name='file' onchange="readURL(this);" /> 
-		<img id="blah" src="#" alt="your image" /> 
-		<button type="submit">Submit & predict</button> 
 
-	</form> 
-	<br>
-	<h1>{{ ss }}</h1> 
+	<div class= "box" >
+	<div class="card new shadow-lg p-3 mb-5 bg-red rounded card" style="width: 18rem">
+                    <div class="card-body" >
+                        <h5 class="card-title" >Animal detection </h5>
+                        <p class="card-text">Upload an image to detect the animal</p>
+            			<form action="/uploader" method="POST" enctype="multipart/form-data"> 
+							<input type='file' name='file' onchange="readURL(this);" /> 
+							<img id="blah" src="#" alt="your image" /> 
+							<button type="submit" class="btn btn-outline-secondary">Submit & predict</button> 
+
+						</form> 
+                       
+                        <hr>
+                		<h1>{{ ss }}</h1>        
+                    </div>
+                </div>
+            </div>
+        </body>
+	 
 </body> 
 
 </html> 
