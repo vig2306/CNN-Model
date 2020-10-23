@@ -5,20 +5,20 @@
 .card, .card:hover {
     transition: transform .3s,box-shadow .3s;
 }
-.body{
+body{
 	height: 100vh;
-	padding: 0px;
+	width: 100%;
+	background-image: url("madagascar.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .box{
- 	background-image: url("madagascar.jpeg");
 	justify-content: center; 
 	display: flex; 
 	height: 100vh;
 	width: 100%; 
 	align-items: center;
-	/*opacity:50%;*/
-	background-color: blue;
 }
 
 .card{
